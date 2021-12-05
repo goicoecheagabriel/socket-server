@@ -1,9 +1,11 @@
 import Server from "./classes/server";
 
-const server = new Server();
+const server = Server.instance;
 
 server.setMiddleware();
+
 server.enabledCors();
+
 server.setRoutes();
 
 server.start( () => {
