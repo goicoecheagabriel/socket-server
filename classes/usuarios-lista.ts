@@ -16,7 +16,7 @@ export class UsuariosLista {
 
         console.log('====== agregar usuario ======');
         console.log( this.lista );
-        
+
         return this.lista;
     }
 
@@ -33,11 +33,21 @@ export class UsuariosLista {
         console.log(this.lista);
     }
 
-    // Obtener lista de usuarios
+    // Obtener lista de usuarios conectados
     public getLista() {
         let lista = this.lista;
 
         console.log(`====== getLista ======`);
+        console.log( lista );
+
+        return lista;
+    }
+
+    // Obtener lista de usuarios conectados
+    public getListaConNombre() {
+        let lista = this.lista.filter( cliente => cliente.nombre !== 'sin-nombre' );
+
+        console.log(`====== getListaConNombre ======`);
         console.log( lista );
 
         return lista;
